@@ -1,0 +1,107 @@
+:root{--roxo:#6a2bd0;--roxo-esc:#4a3470;--grad:linear-gradient(135deg,#6d28d9,#8b38b0);--creme:#f5ecd5;--amarelo:#fccd6b;--claro:#d3c2e4;--cinza:#c9d1da;--azul:#c2e0fb;--rosa:linear-gradient(90deg,#c73fd1,#f5a6f8)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Open Sans',Arial,sans-serif;background:var(--grad) fixed;min-height:100vh;display:flex;flex-direction:column;color:#000}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:2px}
+main{flex:1;width:100%;max-width:1100px;margin:0 auto;padding:24px 20px 48px}
+h1,h2{font-weight:700}
+/* header */
+.topo{background:var(--roxo-esc);display:flex;align-items:center;gap:20px;padding:12px 24px;flex-wrap:wrap}
+.logo{width:76px;height:60px;border-radius:50%;background:#6a00cc;color:#fff;font:italic 800 17px/1 Arial,sans-serif;display:grid;place-items:center;text-align:center}
+.busca{flex:1;min-width:180px;max-width:560px;margin:0 auto;border:0;border-radius:20px;background:var(--cinza);padding:12px;text-align:center;font:700 18px Arial,sans-serif;color:#10261e}
+.icones{display:flex;gap:22px;align-items:center;margin-left:auto}
+.icones a{font-size:28px}
+.perfil{width:46px;height:46px;border-radius:50%;background:linear-gradient(#7c3aed,#ff5fd2);display:grid;place-items:center;font-size:22px}
+/* inicio */
+.capa{display:grid;place-items:center;gap:28px;min-height:100vh;padding:24px;text-align:center}
+.titulo-logo{font:900 clamp(56px,12vw,110px)/.9 'Arial Black',Impact,sans-serif;color:var(--creme);letter-spacing:2px}
+.titulo-logo span{display:block;transform:rotate(-4deg)}
+.caixa{background:#ece3f4;border:6px solid #1a0b26;border-radius:40px;padding:48px 32px;width:min(100%,640px);display:grid;gap:56px;justify-items:center}
+.btn-amarelo{background:var(--amarelo);border:6px solid #3d3a40;border-radius:50px;width:min(100%,380px);padding:20px;font:700 18px Arial,sans-serif;text-align:center;cursor:pointer;color:#222}
+.btn-amarelo:hover{filter:brightness(1.06)}
+/* formularios */
+.centro{display:grid;place-items:center;flex:1;padding:32px 16px}
+.cartao-form{background:var(--roxo-esc);border:2px solid #3d3a40;border-radius:36px;padding:32px;width:min(100%,470px);color:#fddc99;display:grid;gap:18px}
+.cartao-form h1{font-weight:400;font-size:34px}
+.cartao-form label{display:grid;gap:8px;font-size:18px}
+.cartao-form input,.cartao-form textarea{background:transparent;border:1px solid #c9a98a;border-radius:10px;padding:10px;color:#fff;font:inherit;width:100%}
+.cartao-form textarea{min-height:120px;resize:vertical}
+.btn-claro{background:#ffe196;border:0;border-radius:30px;padding:14px;font-size:20px;cursor:pointer;color:#111;text-align:center}
+.nota{font-size:12px;color:#d9bf94;text-align:center}
+.troca{text-align:center;font-size:14px}.troca a{text-decoration:underline}
+/* secoes */
+.subtitulo{font-size:28px;margin:12px 0 20px}
+.filtros{background:#d9c9ea;border:2px solid #1a0b26;border-radius:30px;padding:12px 18px;display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.filtros button{background:#fff;border:2px solid #1a0b26;border-radius:30px;padding:8px 22px;font:700 15px Arial,sans-serif;cursor:pointer}
+.filtros button:hover,.filtros .ativo{background:var(--amarelo)}
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px}
+.painel{background:var(--claro);border:3px solid #1a0b26;border-radius:36px;padding:28px}
+.card{background:#fff;border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
+.foto{height:150px;display:grid;place-items:center;font-size:72px;background:#f3eaff}
+.info{padding:14px 16px 18px;display:grid;gap:8px}
+.info h3{font-size:18px}.info small{font-size:14px}
+.linha{display:flex;justify-content:space-between;align-items:center}
+.preco{font-size:20px;font-weight:700}
+.card.produto .info{background:var(--azul);border-radius:26px 26px 0 0;flex:1;text-align:center}
+.btn{background:var(--rosa);border:0;border-radius:30px;padding:10px 22px;color:#fff;font:700 16px Arial,sans-serif;cursor:pointer;justify-self:center}
+.btn:hover{filter:brightness(1.08)}
+.btn-roxo{background:var(--roxo-esc);color:#fff;border:1px solid #1a0b26;border-radius:30px;padding:12px 24px;font:700 15px Arial,sans-serif;display:inline-block}
+.servico{background:var(--cinza);border-radius:36px;padding:14px;display:flex;flex-direction:column}
+.servico .foto{height:190px;border-radius:24px}
+.servico .info{background:#92839a;border-radius:26px;margin-top:-20px;padding:22px;text-align:center;justify-items:center;flex:1}
+.servico h3{font-size:30px}
+/* carrinho */
+.carrinho-topo{display:flex;gap:16px;align-items:center;color:#fff;margin-bottom:18px}
+.carrinho-topo .circ{width:60px;height:60px;border:3px solid #fff;border-radius:50%;display:grid;place-items:center;font-size:28px;background:#6a00cc}
+.pedido{background:#efefef;border-radius:28px;padding:22px;max-width:640px;margin:0 auto}
+.pedido-topo{display:flex;justify-content:space-between;font-weight:700;border-bottom:2px solid #ccc;padding-bottom:16px;margin-bottom:8px}
+.item{display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:2px solid #ccc}
+.item .foto{width:130px;height:80px;border-radius:20px;font-size:40px;flex:none}
+.item .dados{flex:1;display:grid;gap:4px}
+.item .qtd{font-weight:700}
+.resumo{padding-top:14px;display:grid;gap:6px}
+.resumo div{display:flex;justify-content:space-between;font-size:14px}
+.resumo .total{font-size:18px;font-weight:700}
+.btn-final{display:block;width:100%;margin-top:20px;background:var(--grad);color:#fff;border:0;border-radius:20px;padding:12px;font:700 15px Arial,sans-serif;cursor:pointer;text-align:center}
+/* contato / sobre */
+.faixa{background:linear-gradient(90deg,#6d28d9,#c03cc8);border-radius:20px;color:#fff;padding:32px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.faixa h1{font-size:40px}.faixa h2{font-size:26px;margin-bottom:10px}
+.faixa .ilus{font-size:90px}
+.duas{display:grid;grid-template-columns:2fr 1fr;gap:32px}
+.canal{display:flex;gap:16px;align-items:center;margin:26px 0}
+.canal .circ{width:56px;height:56px;border-radius:50%;background:#7a00e0;display:grid;place-items:center;font-size:26px;flex:none}
+.sobre-texto{background:var(--cinza);padding:36px 24px;text-align:center;font-size:22px;border-radius:20px 20px 0 0}
+.sobre-texto p{max-width:620px;margin:auto}
+.pilares{background:var(--cinza);border-top:2px solid #bbb;border-radius:0 0 20px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;padding:24px;text-align:center}
+.pilares .circ{width:64px;height:64px;border-radius:50%;background:#6a00cc;color:#fff;display:grid;place-items:center;margin:0 auto 8px;font-size:30px}
+.pilares h3{font-size:20px}.pilares p{font-size:14px}
+/* rodape */
+.rodape{background:var(--roxo-esc);color:#fff;margin-top:auto}
+.rodape-main{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;padding:24px}
+.rodape .logo{width:80px;height:60px}
+.rodape nav{display:flex;gap:30px;flex-wrap:wrap}
+.rodape nav a:hover{text-decoration:underline}
+.redes{display:flex;gap:20px;font-size:24px;padding:0 24px 18px}
+.copy{border-top:5px solid var(--cinza);padding:18px 24px}
+@media(max-width:700px){.duas{grid-template-columns:1fr}.icones{gap:14px}.topo{justify-content:center}.item .foto{width:90px}}
+@media(prefers-reduced-motion:no-preference){.btn,.btn-amarelo,.filtros button{transition:filter .15s,background .15s}}
+
+/* ===== logo real ===== */
+.logo,.rodape .logo{width:64px;height:64px;border-radius:18px;overflow:hidden;background:none;display:block;flex:none}
+.logo img{width:100%;height:100%;object-fit:cover;display:block}
+/* ===== página inicial ===== */
+.capa{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;min-height:100vh;padding:24px;overflow:hidden}
+.titulo-logo{display:flex;flex-direction:column;align-items:center;line-height:.85;text-align:center;font-family:'Chewy','Arial Black',Impact,sans-serif;font-weight:400;color:var(--creme);letter-spacing:2px}
+.titulo-logo .need{font-size:clamp(64px,13vw,120px)}
+.titulo-logo .food{font-size:clamp(80px,17vw,150px);transform:rotate(-4deg) scaleY(1.1);margin-top:6px}
+.palco{position:relative;width:min(100%,640px)}
+.palco .caixa{width:100%}
+.logo-capa{position:absolute;width:210px;height:210px;object-fit:cover;border-radius:44px;right:-170px;top:-30px;transform:rotate(25deg);opacity:.95;pointer-events:none}
+@media(max-width:1000px){.logo-capa{display:none}}
+.voltar{position:absolute;top:20px;left:24px;color:#fff;font-weight:700}
+.centro{position:relative}
+
+/* ===== rodapé em todas as páginas ===== */
+.capa{flex:1;min-height:0;max-width:none;padding:40px 24px}
+.centro{flex:1;min-height:0;padding:72px 16px 40px}
+.rodape{width:100%}
